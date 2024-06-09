@@ -1,0 +1,36 @@
+[
+	{
+		"type": "effect_type",
+		"id": "mutagen_kitsune",
+		"name": [ "Kitsune Mutation", "Kitsune Transformation", "Kitsune Metamorphosis" ],
+		"desc": [
+		  "You consumed kitsune serum.",
+		  "You consumed a large amount of kitsune serum.",
+		  "You consumed a life-changing amount of kitsune serum."
+		],
+		"max_intensity": 3,
+		"resist_traits": [ "THRESH_KITSUNE" ],
+		"base_mods": {
+		  "hurt_min": [ 1 ],
+		  "hurt_max": [ 2 ],
+		  "hurt_chance": [ -22 ],
+		  "hurt_tick": [ 75 ],
+		  "pain_min": [ 1 ],
+		  "pain_max": [ 2 ],
+		  "pain_chance": [ 100 ],
+		  "pain_tick": [ 75 ]
+		},
+		"scaling_mods": { "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
+		"rating": "bad",
+		"blood_analysis_description": "Kitsune Mutagen Contamination"
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_kitsune_obfuscating_aura",
+		"name": [ "Obfuscating Aura" ],
+		"desc": [ "Light is distorting around you and making it easier for you to avoid attacks." ],
+		"apply_message": "The edges of your vision ripple slightly.",
+		"remove_message": "The aura of light distortion around you vanishes.",
+		"enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": { "math": [ "( ((u_spell_level('obfuscated_body')*3) / 7) + 1)" ] } } ] } ]
+	}
+]

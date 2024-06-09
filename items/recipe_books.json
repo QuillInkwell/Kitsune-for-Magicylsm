@@ -1,0 +1,22 @@
+[
+	{
+		"id": "kitsune_historical",
+		"type": "BOOK",
+		"category": "manuals",
+		"name": { "str": "Kitsune Mythology", "str_pl": "copies of Kitsune Mythologies" },
+		"description": "This book details legends surrounding the mythical Kitsune. It includes conjecture of speculative alchemical recipies.",
+		"weight": "1 kg",
+		"volume": "750 ml",
+		"price": 7900,
+		"material": [ "paper" ],
+		"symbol": "?",
+		"color": "brown",
+		"skill": "chemistry",
+		"required_level": 8,
+		"max_level": 8,
+		"intelligence": 11,
+		"time": "37 m",
+		"fun": -2,
+		"melee_damage": { "bash": 5 }
+	}
+]

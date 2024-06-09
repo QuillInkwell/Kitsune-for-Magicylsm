@@ -1,0 +1,65 @@
+[
+  {
+	"type": "recipe",
+	"activity_level": "NO_EXERCISE",
+	"result": "mutagen_kitsune",
+	"qualities": [ { "id": "MAGIC_MUTAGEN", "level": 1 }, { "id": "MANA_INFUSE", "level": 2 }, { "id": "CONCENTRATE", "level": 1 } ],
+	"components": [ 
+		[ [ "mana_dust", 5 ] ],
+		[ [ "kitsune_pearl_dust", 3 ] ],
+		[ [ "mana_infused_blood", 2 ], [ "mana_potion", 1 ] ],
+		[ [ "mutagen", 1 ] ] 
+	],
+	"skill_used": "chemistry",
+	"difficulty": 4,
+	"skills_required": [ "spellcraft", 6 ],
+	"proficiencies": [ { "proficiency": "prof_alchemy" } ],
+	"time": "4 h",
+	"batch_time_factors": [ 80, 5 ],
+	"book_learn": [ [ "kitsune_historical", 1 ] ],
+	"category": "CC_ENCHANTED",
+	"subcategory": "CSC_ENCHANTED_POTIONS"
+  },
+  {
+	"type": "recipe",
+	"activity_level": "NO_EXERCISE",
+	"result": "iv_kitsune",
+	"qualities": [
+	  { "id": "MAGIC_MUTAGEN", "level": 1 },
+	  { "id": "MANA_INFUSE", "level": 2 },
+	  { "id": "CONCENTRATE", "level": 1 },
+	  { "id": "SEPARATE", "level": 1 },
+	  { "id": "ANALYSIS", "level": 1 }
+	],
+	"components": [ 
+		[ [ "mana_dust", 20 ] ], 
+		[ [ "kitsune_pearl_dust", 10 ], ["kitsune_pearl", 1] ],
+		[ [ "mana_infused_blood", 6 ], [ "mana_potion", 4 ], [ "mana_potion_greater", 1 ] ]
+	],
+	"skill_used": "chemistry",
+	"difficulty": 4,
+	"skills_required": [ "spellcraft", 4 ],
+	"proficiencies": [ { "proficiency": "prof_alchemy" } ],
+	"time": "3 h",
+	"batch_time_factors": [ 80, 5 ],
+	"book_learn": [ [ "kitsune_historical", 2 ] ],
+	"category": "CC_ENCHANTED",
+	"subcategory": "CSC_ENCHANTED_POTIONS"
+  },
+  {
+	"type": "recipe",
+	"activity_level": "NO_EXERCISE",
+	"result": "kitsune_pearl_dust",
+	"charges": 10,
+	"qualities": [ { "id": "CONTAIN", "level": 1 } ],
+	"tools": [ [ [ "mortar_pestle", -1 ] ] ],
+    "components": [ [ [ "kitsune_pearl", 1 ] ] ],
+    "time": "5 m",
+    "skill_used": "fabrication",
+    "difficulty": 1,
+    "skills_required": [ "spellcraft", 2 ],
+	"book_learn": [ [ "kitsune_historical", 1 ] ],
+    "category": "CC_ENCHANTED",
+    "subcategory": "CSC_ENCHANTED_OTHER"
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "type": "dream",
+    "messages": [ 
+		"You dream of a fox wandering at night.",
+		"While dreaming, you see lights in the darkness of a distant forest.",
+		"You dream of rain on a sunny day. For some reason it feels very pleasant."
+	],
+    "category": "KITSUNE",
+    "strength": 1
+  },
+  {
+    "type": "dream",
+    "messages": [
+		"In your dream you look into a pool of water and see a fox in your reflection.",
+		"You dream you are in the stars, you feel a sense of longing.",
+		"You have a lucid in which you are a fox stalking through the underbrush, it’s oddly…satisfying."
+	],
+    "category": "KITSUNE",
+    "strength": 2
+  },
+  {
+    "type": "dream",
+    "messages": [
+		"You dream of a playing trick on a boastful human.",
+		"You dream of a glistening white ball that makes you feel warm inside."
+    ],
+    "category": "KITSUNE",
+    "strength": 3
+  }
+]

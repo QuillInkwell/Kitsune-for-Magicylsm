@@ -1,0 +1,67 @@
+[
+	{
+		"type": "item_group",
+		"id": "kitsune_books",
+		"//": "puts all the kitsune books in one group, so it's easy to add more later",
+		"items": [ [ "kitsune_historical", 10 ] ]
+	},
+	{
+		"type": "item_group",
+		"id": "manuals",
+		"copy-from": "manuals",
+		"extend": { "items": [ { "group": "kitsune_books", "prob": 4 } ] }
+	},
+	{
+		"type": "item_group",
+		"id": "lab_bookshelves",
+		"copy-from": "lab_bookshelves",
+		"extend": {
+			"items": [
+				{ "group": "kitsune_books", "prob": 3 }
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "mansion_books",
+		"copy-from": "mansion_books",
+		"extend": {
+			"items": [
+				{ "group": "kitsune_books", "prob": 1 }
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "exotic_books",
+		"copy-from": "exotic_books",
+		"extend": {
+			"items": [
+				{ "group": "kitsune_books", "prob": 1 }
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "organic_materials",
+		"copy-from": "organic_materials",
+		"subtype": "collection",
+		"extend": {
+			"items": [
+				{ "item": "kitsune_pearl", "prob": 5, "count": [ 1, 3 ] },
+				{ "item": "kitsune_pearl_dust", "prob": 10, "count": [ 10, 25 ] }
+			]
+		}
+	},
+	{
+		"type": "item_group",
+		"id": "NC_FORGE_LORD_STORE_LIBRARY",
+		"copy-from": "NC_FORGE_LORD_STORE_LIBRARY",
+		"subtype": "collection",
+		"extend": {
+			"items": [
+				{ "group": "kitsune_books", "prob": 20, "count": [ 0, 1 ] }
+			]
+		}
+	}
+]

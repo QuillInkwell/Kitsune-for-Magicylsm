@@ -1,0 +1,26 @@
+[  
+	{
+		"type": "effect_on_condition",
+		"id": "shed_summer_timer_kitsune",
+		"recurrence": [ "1 days", "7 days" ],
+		"condition": { "and": [ { "is_season": "summer" }, { "u_has_trait": "KITSUNE_FUR" } ] },
+		"effect": [
+			{ "u_message": "You've been shedding for a while, and your coat feels noticably lighter.", "type": "good" },
+			{ "u_add_trait": "KITSUNE_FUR_SUMMER" },
+			{ "u_lose_trait": "KITSUNE_FUR" }
+		]
+		},
+		
+		{
+		"type": "effect_on_condition",
+		"id": "regrow_timer_kitsune",
+		"recurrence": [ "5 days", "15 days" ],
+		"condition": { "and": [ { "u_has_trait": "KITSUNE_FUR_SUMMER" }, { "not": { "is_season": "summer" } } ] },
+		"effect": [
+			{ "u_message": "It looks like your coat has grown back in for the colder seasons.", "type": "good" },
+			{ "u_add_trait": "KITSUNE_FUR" },
+			{ "u_lose_trait": "KITSUNE_FUR_SUMMER" }
+
+		]
+	}
+ ]

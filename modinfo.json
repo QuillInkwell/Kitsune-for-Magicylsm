@@ -1,0 +1,12 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "kitsune",
+    "name": "Kitsune for Magicylsm",
+    "authors": [ "Quill" ],
+    "maintainers": [ "Quill" ],
+    "description": "A Magic fox mutation tree.",
+    "category": "content",
+    "dependencies": [ "dda", "magiclysm" ]
+  }
+]

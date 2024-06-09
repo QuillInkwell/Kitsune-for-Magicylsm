@@ -1,0 +1,12 @@
+[  
+  {
+    "type": "mutation_category",
+    "id": "KITSUNE",
+    "name": "Kitsune",
+    "wip": true,
+    "threshold_mut": "THRESH_KITSUNE",
+    "mutagen_message": "You feel a warmth welling up deep inside and have a strange urge to eat.. Tofu?",
+    "memorial_message": "Became an arcane trickster.",
+    "vitamin": "mutagen_kitsune"
+  }
+]
