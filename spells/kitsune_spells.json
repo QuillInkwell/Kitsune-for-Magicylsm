@@ -12,8 +12,6 @@
 		"max_level": 1,
 		"min_range": 0,
 		"max_range": 0,
-		"base_energy_cost": 100,
-		"energy_source": "MANA",
 		"spell_class": "THRESH_KITSUNE",
 		"teachable": false
 	},
@@ -30,8 +28,6 @@
 		"max_level": 1,
 		"min_range": 0,
 		"max_range": 0,
-		"base_energy_cost": 100,
-		"energy_source": "MANA",
 		"spell_class": "THRESH_KITSUNE",
 		"teachable": false
 	}

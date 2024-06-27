@@ -24,11 +24,18 @@
 	},
 	{
 		"type": "effect_on_condition",
-		"id": "eoc_kitsune_thresh_trait_gain",
+		"id": "eoc_event_kitsune_thresh_trait_gain",
 		"eoc_type": "EVENT",
         "required_event": "crosses_mutation_threshold",
 		"condition": 
 		{ "compare_string": [ "KITSUNE", { "context_val": "category" } ] },
+		"effect": [
+			{ "run_eocs": [ "eoc_kitsune_thresh_breach" ] }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_thresh_breach",
 		"effect": [
 			{ "run_eocs": [ "eoc_kitsune_remove_other_tails", "eoc_kitsune_remove_other_skins", "eoc_kitsune_remove_other_mana" ] },
 			{ "u_add_trait": "KITSUNE_TAIL_TWO" },
@@ -42,7 +49,9 @@
 		"effect": [
 			{ "u_add_trait": "ZENKO" },
 			{ "u_add_trait": "ZENKO_NETHER_PER" },
-			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" }
+			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
+			{ "math": ["u_celestial_energy_cap", "=", "100"] },
+			{ "math": ["u_stored_celestial_energy", "=", "0"] }
 		]
 	},
 	{

@@ -1,0 +1,104 @@
+[
+	{
+		"id": "ACT_zenko_meditate",
+		"type": "activity_type",
+		"activity_level": "NO_EXERCISE",
+		"verb": "meditating",
+		"based_on": "time",
+		"can_resume": false,
+		"completion_eoc": "eoc_zenko_finish_meditating"
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_add_celestial_energy",
+		"effect": [
+			{ "math": ["u_stored_celestial_energy", "=", "min(u_celestial_energy_cap, u_stored_celestial_energy + _amount_to_add)"] }
+		]
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_zenko_meditation_complete",
+		"name": [ "Refreshed" ],
+		"desc": [ "You have meditated today." ],
+		"rating": "good"
+	},
+	{
+		"type": "effect_type",
+		"id": "effect_zenko_npc_harnessed",
+		"name": [ "Faithful" ],
+		"desc": [ "You have contributed your faith today." ],
+		"rating": "neutral",
+		"show_in_info": true
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_print_celestial_energy",
+		"effect": [
+			{ "u_message": "Your current Celestial Energy is <u_val:stored_celestial_energy>/<u_val:celestial_energy_cap>." }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_purify_search",
+		"effect": [
+			{
+				"u_map_run_item_eocs": "all",
+				"min_radius": 0,
+				"max_radius": 3,
+				"search_data": [ {"category": "corpses"} ],
+				"true_eocs": [ "eoc_zenko_purify_corpse" ]
+			},
+			{ "u_message": "You finish purifying the area. Your new total Celestial Energy is <u_val:stored_celestial_energy>/<u_val:celestial_energy_cap>." }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_purify_corpse",
+		"effect": [
+			{ "u_message": "The <npc_name> is reduced to cloud of mist that quickly fades." },
+			"npc_die",
+			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "variables": { "amount_to_add": "10" } }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_harness_npc",
+		"condition": { "not": { "u_has_effect": "effect_zenko_npc_harnessed" } },
+		"effect": [
+			{ "u_add_effect": "effect_zenko_npc_harnessed", "duration": "24 hours" },
+			{ "math": ["_trust_based_amount", "=", "100 * ( (u_val('npc_trust') / 10 ) + 1 )"] },
+			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "alpha_talker": "npc", "variables": { "amount_to_add": { "context_val": "trust_based_amount" } } },
+			{ "npc_message": "You complete the rite of faith with <u_name>. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>."}
+		],
+		"false_effect": [
+			{ "npc_message": "<u_name> has already performed the rite today." }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_meditate_start",
+		"condition": { "and": [ { "not": "is_day" }, "u_is_outside", { "is_weather": "clear" } ]  },
+		"effect": [
+			{ 
+				"if": { "not": { "u_has_effect": "effect_zenko_meditation_complete" } },
+				"then": [
+					{ "u_message": "You sit down and begin to meditate under the stars. Focusing your mind on gathering Celestial Energy from the hevens above."},
+					{ "u_assign_activity": "ACT_zenko_meditate", "duration": 3600 }
+				],
+				"else": { "u_message": "You can't do that right now. You've already meditated today."}
+			}
+		],
+		"false_effect": [
+			{ "u_message": "It would be best to meditate outside under the stars in clear weather." }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_finish_meditating",
+		"effect": [
+			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "variables": { "amount_to_add": "50" } },
+			{ "u_add_effect": "effect_zenko_meditation_complete", "duration": "24 hours" },
+			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation." }
+		]
+	}
+]

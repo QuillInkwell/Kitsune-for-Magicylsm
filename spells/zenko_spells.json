@@ -1,0 +1,61 @@
+[
+	{
+		"id": "zenko_check_energy",
+		"type": "SPELL",
+		"name": "Check Celestial Energy",
+		"description": "Concentrate on your Star Pearl to check the amount of Celestial Energy stored inside.",
+		"message": "You concentrate on your pearl.",
+		"valid_targets": [ "self" ],
+		"effect": "effect_on_condition",
+		"effect_str": "eoc_print_celestial_energy",
+		"shape": "blast",
+		"teachable": false,
+		"spell_class": "ZENKO",
+		"flags": [ "NO_FAIL" ]	
+	},
+	{
+		"id": "zenko_meditate",
+		"type": "SPELL",
+		"name": "Meditate",
+		"description": "Focus your mind on gathering Celestial Energy from the hevens and stars above.",
+		"message": "You check your surroundings.",
+		"valid_targets": [ "self" ],
+		"effect": "effect_on_condition",
+		"effect_str": "eoc_zenko_meditate_start",
+		"shape": "blast",
+		"teachable": false,
+		"spell_class": "ZENKO",
+		"flags": [ "NO_FAIL" ]	
+	},
+	{
+		"id": "zenko_purify",
+		"type": "SPELL",
+		"name": "Purify",
+		"description": "Purify the area around yourself cleansing all corpses in the process. Grants a small amount of Celestial Energy for every purified corpse.",
+		"message": "You begin purifying the area around yourself.",
+		"valid_targets": [ "self" ],
+		"effect": "effect_on_condition",
+		"effect_str": "eoc_zenko_purify_search",
+		"shape": "blast",
+		"teachable": false,
+		"base_casting_time": 18000,
+		"spell_class": "ZENKO",
+		"flags": [ "NO_FAIL" ]	
+	},
+	{
+		"id": "zenko_harness_npc",
+		"type": "SPELL",
+		"name": "Rite of Faith",
+		"description": "When another individual places their trust in you. The essence of that faith can be harnessed and converted into Celestial Energy using this spell.",
+		"message": "You start performing the rite.",
+		"valid_targets": [ "ally" ],
+		"effect": "effect_on_condition",
+		"effect_str": "eoc_zenko_harness_npc",
+		"shape": "blast",
+		"min_range": 3,
+		"teachable": false,
+		"base_casting_time": 30000,
+		"spell_class": "ZENKO",
+		"flags": [ "NO_FAIL" ]	
+	}
+]
