@@ -7,6 +7,7 @@
 		"description": "You sometimes recall life before your pearl. Now its warmth is your most treasured possession.",
 		"enchantments": [ { "values": [ { "value": "INTELLIGENCE", "add": 3 }, { "value": "MAX_MANA", "add": 2000} ] } ],
 		"spells_learned": [ ["kitsune_shapeshift_into_human", 1], ["kitsune_shapeshift_into_kitsune", 1] ],
+		"integrated_armor": [ "integrated_kitsune_star_pearl" ],
 		"valid": false,
 		"purifiable": false,
 		"threshold": true

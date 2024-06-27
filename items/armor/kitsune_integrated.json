@@ -73,5 +73,21 @@
 			"encumbrance": 0
 		  }
 		]
+	},
+	{
+		"id": "integrated_kitsune_star_pearl",
+		"type": "ARMOR",
+		"name": { "str": "star pearl" },
+		"description": "A glistening pearl that radiates with a warm glow.",
+		"price": 0,
+		"price_postapoc": 0,
+		"symbol": "o",
+		"color": "white",
+		"flags": [ "INTEGRATED", "UNBREAKABLE" ],
+		"weight": "10 g",
+		"volume": "36 ml",
+		"material": [ "magical_material" ],
+		"//": "TODO: Trigger an EOC on activation to bring up the powers window which handles Kitsune progression. Unless we progression work another way.",
+		"//2": "TODO: If the EOC features for charge manipulation are added instead of storing the special resource as a variable store it as charges."
 	}
 ]

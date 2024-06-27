@@ -30,7 +30,7 @@
 		"condition": 
 		{ "compare_string": [ "KITSUNE", { "context_val": "category" } ] },
 		"effect": [
-			{ "run_eocs": [ "eoc_kitsune_remove_other_tails", "eoc_kitsune_remove_other_skins" ] },
+			{ "run_eocs": [ "eoc_kitsune_remove_other_tails", "eoc_kitsune_remove_other_skins", "eoc_kitsune_remove_other_mana" ] },
 			{ "u_add_trait": "KITSUNE_TAIL_TWO" },
 			{ "u_add_trait": "KITSUNE_FUR" },
 			{ "open_dialogue": { "topic": "KITSUNE_THRESHOLD_SELECT" } }
@@ -101,6 +101,30 @@
 			{ "u_lose_trait": "RABBIT_FUR" },
 			{ "u_lose_trait": "CAMO1" },
 			{ "u_lose_trait": "CAMO2" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_remove_other_mana",
+		"effect": [
+			{ "u_lose_trait": "MANA_ADD1" },
+			{ "u_lose_trait": "MANA_ADD2" },
+			{ "u_lose_trait": "MANA_ADD3" },
+			{ "u_lose_trait": "MANA_SUB1" },
+			{ "u_lose_trait": "MANA_SUB2" },
+			{ "u_lose_trait": "MANA_SUB3" },
+			{ "u_lose_trait": "MANA_REGEN1" },
+			{ "u_lose_trait": "MANA_REGEN2" },
+			{ "u_lose_trait": "MANA_REGEN3" },
+			{ "u_lose_trait": "BAD_MANA_REGEN1" },
+			{ "u_lose_trait": "BAD_MANA_REGEN2" },
+			{ "u_lose_trait": "BAD_MANA_REGEN3" },
+			{ "u_lose_trait": "MANA_MULT1" },
+			{ "u_lose_trait": "MANA_MULT2" },
+			{ "u_lose_trait": "MANA_MULT3" },
+			{ "u_lose_trait": "BAD_MANA_MULT1" },
+			{ "u_lose_trait": "BAD_MANA_MULT2" },
+			{ "u_lose_trait": "BAD_MANA_MULT3" }
 		]
 	},
 	{
