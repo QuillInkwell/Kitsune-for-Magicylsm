@@ -23,14 +23,5 @@
 		"scaling_mods": { "hurt_chance": [ 21, 0 ], "pain_chance": [ -30 ] },
 		"rating": "bad",
 		"blood_analysis_description": "Kitsune Mutagen Contamination"
-	},
-	{
-		"type": "effect_type",
-		"id": "effect_kitsune_obfuscating_aura",
-		"name": [ "Obfuscating Aura" ],
-		"desc": [ "Light is distorting around you and making it easier for you to avoid attacks." ],
-		"apply_message": "The edges of your vision ripple slightly.",
-		"remove_message": "The aura of light distortion around you vanishes.",
-		"enchantments": [ { "values": [ { "value": "BONUS_DODGE", "add": { "math": [ "( ((u_spell_level('obfuscated_body')*3) / 7) + 1)" ] } } ] } ]
 	}
 ]

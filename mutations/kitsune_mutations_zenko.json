@@ -1,0 +1,34 @@
+[
+	{
+		"type": "mutation",
+		"id": "ZENKO",
+		"name": { "str": "Zenko" },
+		"points": 2,
+		"description": "You are ward against the evil that is intruding onto this world. Purify the evil, gain the fealty of others, and practice faithfulness to be granted Celestial Energy. Then harness that energy to push back the darkness.",
+		"purifiable": false
+	},
+	{
+		"type": "mutation",
+		"id": "ZENKO_NETHER_PER",
+		"name": { "str": "Otherwordly Perception" },
+		"points": 2,
+		"description": "Your pearl resonates when otherworldly evils are near. Allowing you to sense them through walls and from great distances.",
+		"purifiable": false,
+		"enchantments": [ { "values": [ { "value": "SIGHT_RANGE_NETHER", "add": 80} ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "ZENKO_ENCHANTED_FUR_WARDING",
+		"name": { "str": "Enchanted Fur" },
+		"points": 2,
+		"description": "Smooth glistening white and red fur has grown all over your body. It seems to have gained an almost magical property to it, emiting a constant aura of protection around you.",
+		"purifiable": false,
+		"enchantments": [ "enchant_kitsune_fur_armor" ]
+	},
+	{
+		"type": "enchantment",
+		"id": "enchant_kitsune_fur_armor",
+		"condition": "ALWAYS",
+		"values": [ { "value": "ARMOR_ALL", "add": -3 } ]
+	}
+]

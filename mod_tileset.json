@@ -14,20 +14,23 @@
 		"file": "UndeadPeople.png",
 		"tiles": [
 		  { "id": "overlay_mutation_KITSUNE_MUZZLE", "fg": 1, "rotates": false },
-		  { "id": "overlay_mutation_TAIL_THREE", "fg": 13, "rotates": false },
-		  { "id": "overlay_mutation_TAIL_SIX", "fg": 10, "rotates": false },
-		  { "id": "overlay_mutation_TAIL_NINE", "fg": 7, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_TWO", "fg": 14, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_THREE", "fg": 13, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_FOUR", "fg": 12, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_FIVE", "fg": 11, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_SIX", "fg": 10, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_SEVEN", "fg": 9, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_EIGHT", "fg": 8, "rotates": false },
+		  { "id": "overlay_mutation_KITSUNE_TAIL_NINE", "fg": 7, "rotates": false },
 		  { "id": "mon_foxfire", "fg": [{ "weight": 3, "sprite": 2}, {"weight": 5, "sprite": 3}], "rotates": false },
 		  { "id": "overlay_male_mutation_KITSUNE_FUR", "fg": 25, "rotates": false },
 		  { "id": "overlay_male_mutation_KITSUNE_FUR_SUMMER", "fg": 25, "rotates": false },
-		  { "id": "overlay_male_mutation_KITSUNE_ENCHANTED_FUR", "fg": 27, "rotates": false},
+		  { "id": "overlay_male_mutation_ZENKO_ENCHANTED_FUR_WARDING", "fg": 27, "rotates": false},
+		  { "id": "overlay_male_mutation_YAKO_ENCHANTED_FUR_WARDING", "fg": 27, "rotates": false},
 		  { "id": "overlay_female_mutation_KITSUNE_FUR", "fg": 24, "rotates": false },
 		  { "id": "overlay_female_mutation_KITSUNE_FUR_SUMMER", "fg": 24, "rotates": false },
-		  { "id": "overlay_female_mutation_KITSUNE_ENCHANTED_FUR", "fg": 26, "rotates": false},
-		  { "id": "mon_fox_twotail", "fg": 16, "rotates": false},
-		  { "id": "mon_fox_threetail", "fg": 17, "rotates": false},
-		  { "id": "mon_fox_fourtail", "fg": 18, "rotates": false},
-		  { "id": "mon_fox_fivetail", "fg": 19, "rotates": false}
+		  { "id": "overlay_female_mutation_ZENKO_ENCHANTED_FUR_DODGE", "fg": 26, "rotates": false},
+		  { "id": "overlay_female_mutation_YAKO_ENCHANTED_FUR_DODGE", "fg": 26, "rotates": false}
 		  ]
 	  }
     ]

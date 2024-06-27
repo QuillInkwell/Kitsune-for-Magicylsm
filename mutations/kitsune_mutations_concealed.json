@@ -1,0 +1,164 @@
+[
+	{
+		"type": "mutation",
+		"id": "KITSUNE_PAWS_CONCEALED",	
+		"name": { "str": "Concealed Paws" },
+		"description": "In your human form you no longer need to deal with your encumbering paws.",
+		"points": 2,
+		"types": [ "HANDS" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_SNOUT_CONCEALED",
+		"name": { "str": "Concealed Snout" },
+		"description": "In your human form your snout is concealed. You can once again wear masks of any kind.",
+		"points": 2,
+		"types": [ "MUZZLE" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_PADDED_FEET_CONCEALED",
+		"name": { "str": "Concealed Padded Feet" },
+		"description": "In your human form your padded feet are fully concealed. Any benefits confered by them are also temporarily suspended.",
+		"points": 2,
+		"types": [ "FEET" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_ANIMAL_FEET_CONCEALED",
+		"name": { "str": "Concealed Digitgrade Legs" },
+		"description": "In your human form your legs have returned to normal. Any benefits confered from your digitgrade legs are also temporarily suspended.",
+		"points": 2,
+		"types": [ "FEET" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_NAILS_CONCEALED",
+		"name": { "str": "Concealed Nails" },
+		"description": "In your human form your nails have returned to a normal length. Any benefits confered from them are also temporarily suspended.",
+		"points": 2,
+		"types": [ "CLAWS" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_CLAWS_CONCEALED",
+		"name": { "str": "Concealed Claws" },
+		"description": "In your human form your claws have returned to a normal fingernails. Any benefits confered from them are also temporarily suspended.",
+		"points": 2,
+		"types": [ "CLAWS" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_FUR_CONCEALED",
+		"name": { "str": "Concealed Fur Coat" },
+		"description": "In your human form your fur is concealed. Any benefits confered by are temporarily suspended.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "SKIN" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_FUR_SUMMER_CONCEALED",
+		"name": { "str": "Concealed Summer Coat" },
+		"description": "In your human form your fur is concealed. Any benefits confered by are temporarily suspended.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "SKIN" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_EARS_CONCEALED",
+		"name": { "str": "Concealed Kitsune Ears" },
+		"description": "You have completly normal human ears now. Your hearing has returned to normal as well.",
+		"points": 2,
+		"types": [ "EARS" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_MUZZLE_CONCEALED",
+		"name": { "str": "Concealed Kitsune Muzzle" },
+		"description": "You have concealed your muzzle revealing a normal human face, if a bit fox-like.",
+		"points": 0,
+		"types": [ "MUZZLE" ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_TWO_TAILS_CONCEALED",
+		"name": { "str": "Concealed Two Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 0.2 }, { "value": "REGEN_MANA", "multiply": 0.1 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_THREE_TAILS_CONCEALED",
+		"name": { "str": "Concealed Three Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 0.4 }, { "value": "REGEN_MANA", "multiply": 0.2 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_FOUR_TAILS_CONCEALED",
+		"name": { "str": "Concealed Four Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 0.6 }, { "value": "REGEN_MANA", "multiply": 0.3 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_FIVE_TAILS_CONCEALED",
+		"name": { "str": "Concealed Five Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 0.8 }, { "value": "REGEN_MANA", "multiply": 0.4 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_SIX_TAILS_CONCEALED",
+		"name": { "str": "Concealed Six Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 1 }, { "value": "REGEN_MANA", "multiply": 0.5 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_SEVEN_TAILS_CONCEALED",
+		"name": { "str": "Concealed Seven Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 1.2 }, { "value": "REGEN_MANA", "multiply": 0.6 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_EIGHT_TAILS_CONCEALED",
+		"name": { "str": "Concealed Eight Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 1.4 }, { "value": "REGEN_MANA", "multiply": 0.7 } ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "KITSUNE_NINE_TAILS_CONCEALED",
+		"name": { "str": "Concealed Nine Tails" },
+		"description": "Your tails are concealed while you are in human form. Any mana benefits you recieve from them are temporarily halved.",
+		"points": 2,
+		"purifiable": false,
+		"types": [ "MANA_ADD", "MANA_MULT", "MANA_REGEN", "TAIL"],
+		"enchantments": [ { "values": [ { "value": "MAX_MANA", "multiply": 1.6 }, { "value": "REGEN_MANA", "multiply": 0.8 } ] } ]
+	}
+]

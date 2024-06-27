@@ -1,0 +1,160 @@
+[
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_shapeshift_into_human",
+		"effect": [
+			{ "u_message": "You focus your mana inwards and transform yourself, concealing your fxolike features." },
+			{
+				"if": { "u_has_trait": "PAWS" },
+				"then": [ {"u_add_trait": "KITSUNE_PAWS_CONCEALED"}, {"u_lose_trait": "PAWS"} ]
+			},
+			{
+				"if": { "u_has_trait": "SNOUT" },
+				"then": [ {"u_add_trait": "KITSUNE_SNOUT_CONCEALED"}, {"u_lose_trait": "SNOUT"} ]
+			},
+			{
+				"if": { "u_has_trait": "PADDED_FEET" },
+				"then": [ {"u_add_trait": "KITSUNE_PADDED_FEET_CONCEALED"}, {"u_lose_trait": "PADDED_FEET"} ]
+			},
+			{
+				"if": { "u_has_trait": "ANIMAL_FEET" },
+				"then": [ {"u_add_trait": "KITSUNE_ANIMAL_FEET_CONCEALED"}, {"u_lose_trait": "ANIMAL_FEET"} ]
+			},
+			{
+				"if": { "u_has_trait": "NAILS" },
+				"then": [ {"u_add_trait": "KITSUNE_NAILS_CONCEALED"}, {"u_lose_trait": "NAILS"} ]
+			},
+			{
+				"if": { "u_has_trait": "CLAWS" },
+				"then": [ {"u_add_trait": "KITSUNE_CLAWS_CONCEALED"}, {"u_lose_trait": "CLAWS"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FUR" },
+				"then": [ {"u_add_trait": "KITSUNE_FUR_CONCEALED"}, {"u_lose_trait": "KITSUNE_FUR"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FUR_SUMMER" },
+				"then": [ {"u_add_trait": "KITSUNE_FUR_SUMMER_CONCEALED"}, {"u_lose_trait": "KITSUNE_FUR_SUMMER"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_MUZZLE" },
+				"then": [ {"u_add_trait": "KITSUNE_MUZZLE_CONCEALED"}, {"u_lose_trait": "KITSUNE_MUZZLE"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_EARS" },
+				"then": [ {"u_add_trait": "KITSUNE_EARS_CONCEALED"}, {"u_lose_trait": "KITSUNE_EARS"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_TWO" },
+				"then": [ {"u_add_trait": "KITSUNE_TWO_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_TWO"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_THREE" },
+				"then": [ {"u_add_trait": "KITSUNE_THREE_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_THREE"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_FOUR" },
+				"then": [ {"u_add_trait": "KITSUNE_FOUR_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_FOUR"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_FIVE" },
+				"then": [ {"u_add_trait": "KITSUNE_FIVE_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_FIVE"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_SIX" },
+				"then": [ {"u_add_trait": "KITSUNE_SIX_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_SIX"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_SEVEN" },
+				"then": [ {"u_add_trait": "KITSUNE_SEVEN_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_SEVEN"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_EIGHT" },
+				"then": [ {"u_add_trait": "KITSUNE_EIGHT_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_EIGHT"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TAIL_NINE" },
+				"then": [ {"u_add_trait": "KITSUNE_NINE_TAILS_CONCEALED"}, {"u_lose_trait": "KITSUNE_TAIL_NINE"} ]
+			}
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_shapeshift_into_kitsune",
+		"effect": [
+			{ "u_message": "You let out a breath and release the transformation, returning to your normal self." },
+			{
+				"if": { "u_has_trait": "KITSUNE_PAWS_CONCEALED" },
+				"then": [ {"u_add_trait": "PAWS"}, {"u_lose_trait": "KITSUNE_PAWS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_SNOUT_CONCEALED" },
+				"then": [ {"u_add_trait": "SNOUT"}, {"u_lose_trait": "KITSUNE_SNOUT_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_PADDED_FEET_CONCEALED" },
+				"then": [ {"u_add_trait": "PADDED_FEET"}, {"u_lose_trait": "KITSUNE_PADDED_FEET_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_ANIMAL_FEET_CONCEALED" },
+				"then": [ {"u_add_trait": "ANIMAL_FEET"}, {"u_lose_trait": "KITSUNE_ANIMAL_FEET_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_NAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "NAILS"}, {"u_lose_trait": "KITSUNE_NAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_CLAWS_CONCEALED" },
+				"then": [ {"u_add_trait": "CLAWS"}, {"u_lose_trait": "KITSUNE_CLAWS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FUR_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_FUR"}, {"u_lose_trait": "KITSUNE_FUR_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FUR_SUMMER_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_FUR_SUMMER"}, {"u_lose_trait": "KITSUNE_FUR_SUMMER_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_MUZZLE_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_MUZZLE"}, {"u_lose_trait": "KITSUNE_MUZZLE_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_EARS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_EARS"}, {"u_lose_trait": "KITSUNE_EARS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_TWO_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_TWO"}, {"u_lose_trait": "KITSUNE_TWO_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_THREE_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_THREE"}, {"u_lose_trait": "KITSUNE_THREE_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FOUR_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_FOUR"}, {"u_lose_trait": "KITSUNE_FOUR_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_FIVE_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_FIVE"}, {"u_lose_trait": "KITSUNE_FIVE_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_SIX_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_SIX"}, {"u_lose_trait": "KITSUNE_SIX_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_SEVEN_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_SEVEN"}, {"u_lose_trait": "KITSUNE_SEVEN_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_EIGHT_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_EIGHT"}, {"u_lose_trait": "KITSUNE_EIGHT_TAILS_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "KITSUNE_NINE_TAILS_CONCEALED" },
+				"then": [ {"u_add_trait": "KITSUNE_TAIL_NINE"}, {"u_lose_trait": "KITSUNE_NINE_TAILS_CONCEALED"} ]
+			}
+		]
+	}
+]

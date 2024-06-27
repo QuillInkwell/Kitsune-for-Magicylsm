@@ -1,0 +1,34 @@
+[
+	{
+		"type": "mutation",
+		"id": "YAKO",
+		"name": { "str": "Yako" },
+		"points": 2,
+		"description": "You are an arcane trickster like in the tales of old. Steal Life Energy through combat or leech it from the unknowning masses. Then harness it unleash a myriad of illusions and tricks.",
+		"purifiable": false
+	},
+	{
+		"type": "mutation",
+		"id": "YAKO_SENSE_MIND",
+		"name": { "str": "Mind Sense" },
+		"points": 2,
+		"description": "Your pearl resonates with the minds of others. Allowing you to sense them through walls and from great distances.",
+		"purifiable": false,
+		"enchantments": [ { "values": [ { "value": "SIGHT_RANGE_MINDS", "add": 80} ] } ]
+	},
+	{
+		"type": "mutation",
+		"id": "YAKO_ENCHANTED_FUR_DODGE",
+		"name": { "str": "Enchanted Fur" },
+		"points": 2,
+		"description": "Smooth glistening white and red fur has grown all over your body. It seems to have gained an almost magical property to it, disturbing light around your form in minor ways.",
+		"purifiable": false,
+		"enchantments": [ "enchant_kitsune_fur_dodge" ]
+	},
+	{
+		"type": "enchantment",
+		"id": "enchant_kitsune_fur_dodge",
+		"condition": "ALWAYS",
+		"values": [ { "value": "BONUS_DODGE", "add": 2 } ]
+	}
+]

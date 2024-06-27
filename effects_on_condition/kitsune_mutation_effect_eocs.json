@@ -1,0 +1,133 @@
+[  
+	{
+		"type": "effect_on_condition",
+		"id": "shed_summer_timer_kitsune",
+		"recurrence": [ "1 days", "7 days" ],
+		"condition": { "and": [ { "is_season": "summer" }, { "u_has_trait": "KITSUNE_FUR" } ] },
+		"effect": [
+			{ "u_message": "You've been shedding for a while, and your coat feels noticably lighter.", "type": "good" },
+			{ "u_add_trait": "KITSUNE_FUR_SUMMER" },
+			{ "u_lose_trait": "KITSUNE_FUR" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "regrow_timer_kitsune",
+		"recurrence": [ "5 days", "15 days" ],
+		"condition": { "and": [ { "u_has_trait": "KITSUNE_FUR_SUMMER" }, { "not": { "is_season": "summer" } } ] },
+		"effect": [
+			{ "u_message": "It looks like your coat has grown back in for the colder seasons.", "type": "good" },
+			{ "u_add_trait": "KITSUNE_FUR" },
+			{ "u_lose_trait": "KITSUNE_FUR_SUMMER" }
+
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_thresh_trait_gain",
+		"eoc_type": "EVENT",
+        "required_event": "crosses_mutation_threshold",
+		"condition": 
+		{ "compare_string": [ "KITSUNE", { "context_val": "category" } ] },
+		"effect": [
+			{ "run_eocs": [ "eoc_kitsune_remove_other_tails", "eoc_kitsune_remove_other_skins" ] },
+			{ "u_add_trait": "KITSUNE_TAIL_TWO" },
+			{ "u_add_trait": "KITSUNE_FUR" },
+			{ "open_dialogue": { "topic": "KITSUNE_THRESHOLD_SELECT" } }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_become_zenko",
+		"effect": [
+			{ "u_add_trait": "ZENKO" },
+			{ "u_add_trait": "ZENKO_NETHER_PER" },
+			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_become_yako",
+		"effect": [
+			{ "u_add_trait": "YAKO" },
+			{ "u_add_trait": "YAKO_SENSE_MIND" },
+			{ "u_add_trait": "YAKO_ENCHANTED_FUR_DODGE" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_remove_other_tails",
+		"effect": [
+			{ "u_lose_trait": "TAIL_STUB" },
+			{ "u_lose_trait": "TAIL_FIN" },
+			{ "u_lose_trait": "TAIL_LONG" },
+			{ "u_lose_trait": "TAIL_CATTLE" },
+			{ "u_lose_trait": "TAIL_RAT" },
+			{ "u_lose_trait": "TAIL_THICK" },
+			{ "u_lose_trait": "TAIL_RAPTOR" },
+			{ "u_lose_trait": "TAIL_FLUFFY" },
+			{ "u_lose_trait": "TAIL_STING" },
+			{ "u_lose_trait": "TAIL_CLUB" },
+			{ "u_lose_trait": "TAIL_CLUB" },
+			{ "u_lose_trait": "TAIL_CLUB" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_remove_other_skins",
+		"effect": [
+			{ "u_lose_trait": "JAUNDICE" },
+			{ "u_lose_trait": "SKIN_ROUGH" },
+			{ "u_lose_trait": "SKIN_RASHY" },
+			{ "u_lose_trait": "HIRSUTE" },
+			{ "u_lose_trait": "SKIN_PEELING" },
+			{ "u_lose_trait": "SKIN_SMOOTH" },
+			{ "u_lose_trait": "SPARSE_SCALES" },
+			{ "u_lose_trait": "SCALES" },
+			{ "u_lose_trait": "THICK_SCALES" },
+			{ "u_lose_trait": "SLEEK_SCALES" },
+			{ "u_lose_trait": "FEATHERS" },
+			{ "u_lose_trait": "LIGHTFUR" },
+			{ "u_lose_trait": "URSINE_FUR" },
+			{ "u_lose_trait": "URSINE_FUR_SUMMER" },
+			{ "u_lose_trait": "LUPINE_FUR" },
+			{ "u_lose_trait": "LUPINE_FUR_SUMMER" },
+			{ "u_lose_trait": "FELINE_FUR" },
+			{ "u_lose_trait": "PATCHSKIN1" },
+			{ "u_lose_trait": "PATCHSKIN2" },
+			{ "u_lose_trait": "PATCHSKIN3" },
+			{ "u_lose_trait": "CHITIN" },
+			{ "u_lose_trait": "PLANTSKIN" },
+			{ "u_lose_trait": "RABBIT_FUR" },
+			{ "u_lose_trait": "CAMO1" },
+			{ "u_lose_trait": "CAMO2" }
+		]
+	},
+	{
+		"type": "talk_topic",
+		"id": "KITSUNE_THRESHOLD_SELECT",
+		"dynamic_line": "As you breach through the threshold, you have a chance to chose what kind of Kitsune you awaken as.",
+		"responses": [
+			{ "text": "Tell me more about Zenko", "topic": "KITSUNE_ZENKO_INFO"},
+			{ "text": "Tell me more about Yako", "topic": "KITSUNE_YAKO_INFO"}
+		]
+	},
+	{
+		"type": "talk_topic",
+		"id": "KITSUNE_ZENKO_INFO",
+		"dynamic_line": "Zenko are guardian spirits with the power to ward off evil. By harnessing Celestial Energy you will be able to cast powerful defense and attack spells. Purifying the dead, protecting others, and meditating at shrines will garner Celestial Energy for you to increase your power.",
+		"responses": [
+			{ "text": "Awaken as a Zenko", "topic": "TALK_DONE", "effect": { "run_eocs": [ "eoc_kitsune_become_zenko" ] } },
+			{ "text": "Tell me about the Yako", "topic": "KITSUNE_YAKO_INFO"}
+		]
+	},
+	{
+		"type": "talk_topic",
+		"id": "KITSUNE_YAKO_INFO",
+		"dynamic_line": "Yako are arcane tricksters, self serving spirits with a bit of mean streak. By harnessing Life Energy you will be able to cast powerful illusions and manipulate the minds and bodies of others. Draining another's life in combat as well as subtly leeching life of the unwitting will garner you Life Energy to increase your power.",
+		"responses": [
+			{ "text": "Awaken as a Yako", "topic": "TALK_DONE", "effect": { "run_eocs": [ "eoc_kitsune_become_yako" ] } },
+			{ "text": "Tell me about the Zenko", "topic": "KITSUNE_ZENKO_INFO"}
+		]
+	}
+ ]
