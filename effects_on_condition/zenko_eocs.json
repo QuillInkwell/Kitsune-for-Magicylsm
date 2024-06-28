@@ -157,7 +157,7 @@
 	{
 		"type": "effect_on_condition",
 		"id": "eoc_zenko_meditate_start",
-		"condition": { "and": [ { "not": "is_day" }, "u_is_outside", { "is_weather": "clear" } ]  },
+		"condition": { "and": [ { "not": "is_day" }, "u_is_outside" ] },
 		"effect": [
 			{ 
 				"if": { "not": { "u_has_effect": "effect_zenko_meditation_complete" } },
@@ -176,9 +176,16 @@
 		"type": "effect_on_condition",
 		"id": "eoc_zenko_finish_meditating",
 		"effect": [
-			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "variables": { "amount_to_add": "50" } },
+			{
+				"if": { "is_weather": "clear" },
+				"then": [ { "math": [ "_weather_mod", "=", "1.5" ] } ],
+				"else": { "math": [ "_weather_mod", "=", "1" ] }
+			},
+			{ "math": [ "_focus_mod", "=", "u_val('focus') / 100" ] },
+			{ "math": [ "_meditation_result", "=", "100 * _weather_mod * _focus_mod" ] },
+			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "variables": { "amount_to_add": { "context_val": "meditation_result" } } },
 			{ "u_add_effect": "effect_zenko_meditation_complete", "duration": "24 hours" },
-			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation." }
+			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>." }
 		]
 	}
 ]
