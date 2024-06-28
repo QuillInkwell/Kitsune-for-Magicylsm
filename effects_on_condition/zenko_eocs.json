@@ -9,13 +9,6 @@
 		"completion_eoc": "eoc_zenko_finish_meditating"
 	},
 	{
-		"type": "effect_on_condition",
-		"id": "eoc_zenko_add_celestial_energy",
-		"effect": [
-			{ "math": ["u_stored_celestial_energy", "=", "min(u_celestial_energy_cap, u_stored_celestial_energy + _amount_to_add)"] }
-		]
-	},
-	{
 		"type": "effect_type",
 		"id": "effect_zenko_meditation_complete",
 		"name": [ "Refreshed" ],
@@ -29,6 +22,93 @@
 		"desc": [ "You have contributed your faith today." ],
 		"rating": "neutral",
 		"show_in_info": true
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_add_celestial_energy",
+		"effect": [
+			{ "math": ["u_stored_celestial_energy", "=", "min(u_celestial_energy_cap, u_stored_celestial_energy + _amount_to_add)"] },
+			{
+				"if": { "math": [ "u_stored_celestial_energy", "==", "u_celestial_energy_cap"] },
+				"then": [
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_EIGHT" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_EIGHT" },
+							{ "u_add_trait": "KITSUNE_TAIL_NINE" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "3150" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_SEVEN" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_SEVEN" },
+							{ "u_add_trait": "KITSUNE_TAIL_EIGHT" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "2400" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_SIX" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_SIX" },
+							{ "u_add_trait": "KITSUNE_TAIL_SEVEN" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "1850" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_FIVE" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_FIVE" },
+							{ "u_add_trait": "KITSUNE_TAIL_SIX" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "1450" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_FOUR" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_FOUR" },
+							{ "u_add_trait": "KITSUNE_TAIL_FIVE" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "1100" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_THREE" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_THREE" },
+							{ "u_add_trait": "KITSUNE_TAIL_FOUR" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "850" ] }
+						]
+					},
+					{
+						"if": { "u_has_trait": "KITSUNE_TAIL_TWO" },
+						"then": [
+							{ "u_lose_trait": "KITSUNE_TAIL_TWO" },
+							{ "u_add_trait": "KITSUNE_TAIL_THREE" },
+							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
+							{ "math": [ "u_celestial_energy_cap", "=", "650" ] }
+						]
+					}	
+				]
+			}
+					
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_kitsune_become_zenko",
+		"effect": [
+			{ "u_add_trait": "ZENKO" },
+			{ "u_add_trait": "ZENKO_NETHER_PER" },
+			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
+			{ "math": ["u_celestial_energy_cap", "=", "500"] },
+			{ "math": ["u_stored_celestial_energy", "=", "0"] }
+		]
 	},
 	{
 		"type": "effect_on_condition",

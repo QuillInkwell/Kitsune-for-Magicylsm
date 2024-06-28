@@ -45,17 +45,6 @@
 	},
 	{
 		"type": "effect_on_condition",
-		"id": "eoc_kitsune_become_zenko",
-		"effect": [
-			{ "u_add_trait": "ZENKO" },
-			{ "u_add_trait": "ZENKO_NETHER_PER" },
-			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
-			{ "math": ["u_celestial_energy_cap", "=", "100"] },
-			{ "math": ["u_stored_celestial_energy", "=", "0"] }
-		]
-	},
-	{
-		"type": "effect_on_condition",
 		"id": "eoc_kitsune_become_yako",
 		"effect": [
 			{ "u_add_trait": "YAKO" },
