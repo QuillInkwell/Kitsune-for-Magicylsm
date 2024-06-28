@@ -75,6 +75,22 @@
 	},
 	{
 		"type": "mutation",
+		"id": "ZENKO_ENCHANTED_FUR_WARDING_CONCEALED",
+		"name": { "str": "Enchantment Surpressed" },
+		"description": "With your fur concealed it's enchantment has been temporarily surpressed",
+		"points": 2,
+		"purifiable": false
+	},
+	{
+		"type": "mutation",
+		"id": "YAKO_ENCHANTED_FUR_DODGE_CONCEALED",
+		"name": { "str": "Enchantment Surpressed" },
+		"description": "With your fur concealed it's enchantment has been temporarily surpressed",
+		"points": 2,
+		"purifiable": false
+	},
+	{
+		"type": "mutation",
 		"id": "KITSUNE_MUZZLE_CONCEALED",
 		"name": { "str": "Concealed Kitsune Muzzle" },
 		"description": "You have concealed your muzzle revealing a normal human face, if a bit fox-like.",

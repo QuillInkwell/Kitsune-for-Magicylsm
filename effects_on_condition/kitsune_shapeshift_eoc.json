@@ -37,6 +37,14 @@
 				"then": [ {"u_add_trait": "KITSUNE_FUR_SUMMER_CONCEALED"}, {"u_lose_trait": "KITSUNE_FUR_SUMMER"} ]
 			},
 			{
+				"if": { "u_has_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
+				"then": [ {"u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING_CONCEALED"}, {"u_lose_trait": "ZENKO_ENCHANTED_FUR_WARDING"} ]
+			},
+			{
+				"if": { "u_has_trait": "YAKO_ENCHANTED_FUR_DODGE" },
+				"then": [ {"u_add_trait": "YAKO_ENCHANTED_FUR_DODGE_CONCEALED"}, {"u_lose_trait": "YAKO_ENCHANTED_FUR_DODGE"} ]
+			},
+			{
 				"if": { "u_has_trait": "KITSUNE_MUZZLE" },
 				"then": [ {"u_add_trait": "KITSUNE_MUZZLE_CONCEALED"}, {"u_lose_trait": "KITSUNE_MUZZLE"} ]
 			},
@@ -114,6 +122,14 @@
 			{
 				"if": { "u_has_trait": "KITSUNE_FUR_SUMMER_CONCEALED" },
 				"then": [ {"u_add_trait": "KITSUNE_FUR_SUMMER"}, {"u_lose_trait": "KITSUNE_FUR_SUMMER_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "ZENKO_ENCHANTED_FUR_WARDING_CONCEALED" },
+				"then": [ {"u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING"}, {"u_lose_trait": "ZENKO_ENCHANTED_FUR_WARDING_CONCEALED"} ]
+			},
+			{
+				"if": { "u_has_trait": "YAKO_ENCHANTED_FUR_DODGE_CONCEALED" },
+				"then": [ {"u_add_trait": "YAKO_ENCHANTED_FUR_DODGE"}, {"u_lose_trait": "YAKO_ENCHANTED_FUR_DODGE_CONCEALED"} ]
 			},
 			{
 				"if": { "u_has_trait": "KITSUNE_MUZZLE_CONCEALED" },
