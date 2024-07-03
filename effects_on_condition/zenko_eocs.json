@@ -200,5 +200,17 @@
 		"false_effect": [
 			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!" }
 		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_channel_energy",
+		"condition": { "math": [ "n_stored_celestial_energy", ">=", "300"] },
+		"effect": [
+			{ "math": [ "n_val('mana')", "=", "min( n_val('mana_max'), n_val('mana') + 2000 )" ] },
+			{ "math": [ "n_stored_celestial_energy", "-=", "300" ] }
+		],
+		"false_effect": [
+			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!" }
+		]
 	}
 ]

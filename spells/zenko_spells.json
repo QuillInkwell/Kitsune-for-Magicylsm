@@ -87,5 +87,19 @@
 		"teachable": false,
 		"spell_class": "ZENKO",
 		"flags": [ "NO_FAIL" ]
+	},
+	{
+		"id": "zenko_channel_celestial_energy",
+		"type": "SPELL",
+		"name": "Channel Celestial Energy",
+		"description": "Convert some of your stored Celestial Energy into Mana.",
+		"valid_targets": [ "self" ],
+		"effect": "effect_on_condition",
+		"effect_str": "eoc_zenko_channel_energy",
+		"shape": "blast",
+		"base_casting_time": 500,
+		"teachable": false,
+		"spell_class": "ZENKO",
+		"flags": [ "NO_FAIL" ]
 	}
 ]

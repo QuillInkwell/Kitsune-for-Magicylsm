@@ -6,7 +6,7 @@
 		"points": 2,
 		"description": "You are ward against the evil that is intruding onto this world. Purify the evil, gain the fealty of others, and practice faithfulness to be granted Celestial Energy. Then harness that energy to push back the darkness.",
 		"purifiable": false,
-		"spells_learned": [ ["zenko_check_energy", 0], ["zenko_meditate", 0], ["zenko_purify", 0], ["zenko_harness_npc", 0] ]
+		"spells_learned": [ ["zenko_check_energy", 0], ["zenko_meditate", 0], ["zenko_purify", 0], ["zenko_harness_npc", 0], ["zenko_fox_fire_bolt", 0], ["zenko_channel_celestial_energy", 0] ]
 	},
 	{
 		"type": "mutation",
