@@ -37,7 +37,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_EIGHT" },
 							{ "u_add_trait": "KITSUNE_TAIL_NINE" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "3150" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "3150" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "2.4"] }
 						]
 					},
 					{
@@ -46,7 +47,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_SEVEN" },
 							{ "u_add_trait": "KITSUNE_TAIL_EIGHT" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "2400" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "2400" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "2.2"] }
 						]
 					},
 					{
@@ -55,7 +57,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_SIX" },
 							{ "u_add_trait": "KITSUNE_TAIL_SEVEN" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "1850" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "1850" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "2"] }
 						]
 					},
 					{
@@ -64,7 +67,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_FIVE" },
 							{ "u_add_trait": "KITSUNE_TAIL_SIX" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "1450" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "1450" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "1.8"] }
 						]
 					},
 					{
@@ -73,7 +77,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_FOUR" },
 							{ "u_add_trait": "KITSUNE_TAIL_FIVE" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "1100" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "1100" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "1.6"] }
 						]
 					},
 					{
@@ -82,7 +87,8 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_THREE" },
 							{ "u_add_trait": "KITSUNE_TAIL_FOUR" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "850" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "850" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "1.4"] }
 						]
 					},
 					{
@@ -91,7 +97,9 @@
 							{ "u_lose_trait": "KITSUNE_TAIL_TWO" },
 							{ "u_add_trait": "KITSUNE_TAIL_THREE" },
 							{ "math": [ "u_stored_celestial_energy", "=", "0" ] },
-							{ "math": [ "u_celestial_energy_cap", "=", "650" ] }
+							{ "math": [ "u_celestial_energy_cap", "=", "650" ] },
+							{ "math": ["u_kitsune_power_mod", "=", "1.2"] },
+							{ "math": ["u_spell_level('zenko_celestial_recovery')", "=", "0"] }
 						]
 					}	
 				]
@@ -107,7 +115,8 @@
 			{ "u_add_trait": "ZENKO_NETHER_PER" },
 			{ "u_add_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
 			{ "math": ["u_celestial_energy_cap", "=", "500"] },
-			{ "math": ["u_stored_celestial_energy", "=", "0"] }
+			{ "math": ["u_stored_celestial_energy", "=", "0"] },
+			{ "math": ["u_kitsune_power_mod", "=", "1"] }
 		]
 	},
 	{
@@ -128,7 +137,7 @@
 				"search_data": [ {"category": "corpses"} ],
 				"true_eocs": [ "eoc_zenko_purify_corpse" ]
 			},
-			{ "u_message": "You finish purifying the area. Your new total Celestial Energy is <u_val:stored_celestial_energy>/<u_val:celestial_energy_cap>." }
+			{ "u_message": "You finish purifying the area. Your new total Celestial Energy is <u_val:stored_celestial_energy>/<u_val:celestial_energy_cap>.", "type": "good" }
 		]
 	},
 	{
@@ -148,10 +157,10 @@
 			{ "u_add_effect": "effect_zenko_npc_harnessed", "duration": "24 hours" },
 			{ "math": ["_trust_based_amount", "=", "100 * ( (u_val('npc_trust') / 10 ) + 1 )"] },
 			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "alpha_talker": "npc", "variables": { "amount_to_add": { "context_val": "trust_based_amount" } } },
-			{ "npc_message": "You complete the rite of faith with <u_name>. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>."}
+			{ "npc_message": "You complete the rite of faith with <u_name>. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>.", "type": "good" }
 		],
 		"false_effect": [
-			{ "npc_message": "<u_name> has already performed the rite today." }
+			{ "npc_message": "<u_name> has already performed the rite today.", "type": "bad" }
 		]
 	},
 	{
@@ -165,11 +174,11 @@
 					{ "u_message": "You sit down and begin to meditate under the stars. Focusing your mind on gathering Celestial Energy from the hevens above."},
 					{ "u_assign_activity": "ACT_zenko_meditate", "duration": 3600 }
 				],
-				"else": { "u_message": "You can't do that right now. You've already meditated today."}
+				"else": { "u_message": "You can't do that right now. You've already meditated today.", "type": "bad"}
 			}
 		],
 		"false_effect": [
-			{ "u_message": "It would be best to meditate outside under the stars in clear weather." }
+			{ "u_message": "It would be best to meditate outside under the stars in clear weather.", "type": "bad" }
 		]
 	},
 	{
@@ -185,7 +194,7 @@
 			{ "math": [ "_meditation_result", "=", "100 * _weather_mod * _focus_mod" ] },
 			{ "run_eoc_with": "eoc_zenko_add_celestial_energy", "variables": { "amount_to_add": { "context_val": "meditation_result" } } },
 			{ "u_add_effect": "effect_zenko_meditation_complete", "duration": "24 hours" },
-			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>." }
+			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>.", "type": "good" }
 		]
 	},
 	{
@@ -198,7 +207,7 @@
 			{ "math": [ "n_stored_celestial_energy", "-=", "100" ] }
 		],
 		"false_effect": [
-			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!" }
+			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!", "type": "bad" }
 		]
 	},
 	{
@@ -211,7 +220,7 @@
 			{ "queue_eocs": [ "eoc_zenko_aura_upkeep" ], "time_in_future": "1 minute" }
 		],
 		"false_effect": [
-			{ "u_message": "You don't have enough Celestial Energy to activate your Warding Aura." },
+			{ "u_message": "You attempt to to channel Clestial Energy into your fur but find you reserves are tapped. You don't have enough Celestial Energy to activate your Warding Aura.", "type": "bad" },
 			{ "queue_eocs": [ "eoc_zenko_aura_deactivate" ], "time_in_future": 0 }
 		]
 	},
@@ -241,6 +250,18 @@
 		"effect": [
 			{ "u_deactivate_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
 			{ "u_lose_effect": "effect_zenko_warding_aura" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_celestial_recovery",
+		"condition": { "math": [ "n_stored_celestial_energy", ">=", "300"] },
+		"effect": [
+			{ "npc_cast_spell": { "id": "zenko_celestial_recovery_healing", "npc_message": "Your form glows dimly as you focus your magic on healing your wounds.", "hit_self": true } },
+			{ "math": [ "n_stored_celestial_energy", "-=", "300" ] }
+		],
+		"false_effect": [
+			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!", "type": "bad" }
 		]
 	}
 ]
