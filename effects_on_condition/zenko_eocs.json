@@ -187,5 +187,18 @@
 			{ "u_add_effect": "effect_zenko_meditation_complete", "duration": "24 hours" },
 			{ "u_message": "You lift yourself up off the ground, feeling refreshed as you finish your meditation. Your new total Celestial Energy is <npc_val:stored_celestial_energy>/<npc_val:celestial_energy_cap>." }
 		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_fox_fire_bolt",
+		"condition": { "math": [ "n_stored_celestial_energy", ">=", "100"] },
+		"effect": [
+			{ "u_location_variable": { "context_val": "i_am_here" } },
+			{ "npc_cast_spell": { "id": "zenko_fox_fire_bolt_damage", "npc_message": "You release a bolt of purifying fox flame from your finger tips." }, "loc": {"context_val": "i_am_here"} },
+			{ "math": [ "n_stored_celestial_energy", "-=", "100" ] }
+		],
+		"false_effect": [
+			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!" }
+		]
 	}
 ]
