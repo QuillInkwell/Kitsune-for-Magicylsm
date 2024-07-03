@@ -1,0 +1,15 @@
+[
+	{
+		"type": "effect_type", 
+		"id": "effect_zenko_warding_aura",
+		"max_intensity": 1,
+		"max_effective_intensity": 1,
+		"name": ["Warding Aura"],
+		"desc": ["Your fur shines with an intense protective aura that shields you from some harm."],
+		"rating": "good",
+		"apply_message": "Your fur glows brightly as you channel your Celestial Enegry into it.",
+		"remove_message": "Your fur dims as your Protective Aura weakens back to it's normal state.",
+		"show_in_info": true,
+		"enchantments": [ "enchant_kitsune_fur_armor_active" ]
+	}
+]

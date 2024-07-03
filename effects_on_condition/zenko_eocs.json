@@ -212,5 +212,47 @@
 		"false_effect": [
 			{ "npc_message": "As you finish reciting the incantation your body winces and nothing happens. You don't have enough Celestial Energy!" }
 		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_warding_aura_activated",
+		"condition": { "math": [ "u_stored_celestial_energy", ">=", "50"] },
+		"effect": [
+			{ "math": [ "u_stored_celestial_energy", "-=", "50" ] },
+			{ "u_add_effect": "effect_zenko_warding_aura", "duration": "PERMANENT" },
+			{ "queue_eocs": [ "eoc_zenko_aura_upkeep" ], "time_in_future": "1 minute" }
+		],
+		"false_effect": [
+			{ "u_message": "You don't have enough Celestial Energy to activate your Warding Aura." },
+			{ "queue_eocs": [ "eoc_zenko_aura_deactivate" ], "time_in_future": 0 }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_aura_upkeep",
+		"condition": { "and": [ { "math": [ "u_stored_celestial_energy", ">=", "10"] }, { "u_has_effect": "effect_zenko_warding_aura" } ] },
+		"effect": [
+			{ "math": [ "u_stored_celestial_energy", "-=", "10" ] },
+			{ "queue_eocs": [ "eoc_zenko_aura_upkeep" ], "time_in_future": "1 minute" }
+		],
+		"false_effect": [
+			{ "u_deactivate_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
+			{ "u_lose_effect": "effect_zenko_warding_aura" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_aura_deactivate",
+		"effect": [
+			{ "u_lose_effect": "effect_zenko_warding_aura" }
+		]
+	},
+	{
+		"type": "effect_on_condition",
+		"id": "eoc_zenko_aura_deactivate_future",
+		"effect": [
+			{ "u_deactivate_trait": "ZENKO_ENCHANTED_FUR_WARDING" },
+			{ "u_lose_effect": "effect_zenko_warding_aura" }
+		]
 	}
 ]

@@ -24,12 +24,11 @@
 		"points": 2,
 		"description": "Smooth glistening white and red fur has grown all over your body. It seems to have gained an almost magical property to it, emiting a constant aura of protection around you.",
 		"purifiable": false,
-		"enchantments": [ "enchant_kitsune_fur_armor" ]
-	},
-	{
-		"type": "enchantment",
-		"id": "enchant_kitsune_fur_armor",
-		"condition": "ALWAYS",
-		"values": [ { "value": "ARMOR_ALL", "add": -3 } ]
+		"enchantments": [ "enchant_kitsune_fur_armor" ],
+		"active": true,
+		"starts_active": false,
+		"activated_is_setup": true,
+		"activated_eocs": [ "eoc_zenko_warding_aura_activated" ],
+		"deactivated_eocs": [ "eoc_zenko_aura_deactivate" ]
 	}
 ]

@@ -1,0 +1,14 @@
+[	
+	{
+		"type": "enchantment",
+		"id": "enchant_kitsune_fur_armor",
+		"condition": "ALWAYS",
+		"values": [ { "value": "ARMOR_ALL", "add": -3 } ]
+	},
+	{
+		"type": "enchantment",
+		"id": "enchant_kitsune_fur_armor_active",
+		"condition": "ALWAYS",
+		"values": [ { "value": "ARMOR_ALL", "add": -10 } ]
+	}
+]
