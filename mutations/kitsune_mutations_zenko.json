@@ -10,6 +10,16 @@
 	},
 	{
 		"type": "mutation",
+		"id": "ZENKO_THREE_TAIL",
+		"name": { "str": "Debug - Zenko Three Tail Spells" },
+		"points": 2,
+		"description": "Debug trait hidden from player used to grant spells on third tail.",
+		"purifiable": false,
+		"player_display": false,
+		"spells_learned": [ ["zenko_celestial_recovery", 0] ]
+	},
+	{
+		"type": "mutation",
 		"id": "ZENKO_NETHER_PER",
 		"name": { "str": "Otherwordly Perception" },
 		"points": 2,
