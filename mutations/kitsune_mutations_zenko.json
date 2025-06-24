@@ -25,7 +25,7 @@
 		"points": 2,
 		"description": "Your pearl resonates when otherworldly evils are near. Allowing you to sense them through walls and from great distances.",
 		"purifiable": false,
-		"enchantments": [ { "values": [ { "value": "SIGHT_RANGE_NETHER", "add": 80} ] } ]
+		"//": "temporarily disabled due to changes in recent experimental."
 	},
 	{
 		"type": "mutation",

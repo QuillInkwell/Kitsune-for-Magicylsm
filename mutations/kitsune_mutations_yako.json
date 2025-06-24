@@ -14,7 +14,7 @@
 		"points": 2,
 		"description": "Your pearl resonates with the minds of others. Allowing you to sense them through walls and from great distances.",
 		"purifiable": false,
-		"enchantments": [ { "values": [ { "value": "SIGHT_RANGE_MINDS", "add": 80} ] } ]
+		"//": "temporarily removed mind sense until further notice."
 	},
 	{
 		"type": "mutation",

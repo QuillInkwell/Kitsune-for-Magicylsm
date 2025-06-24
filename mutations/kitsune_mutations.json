@@ -194,7 +194,7 @@
 	{
 		"type": "mutation",
 		"id": "KITSUNE_GENE_LOCK",
-		"name": { "str": "Restricted Gene-line" },
+		"name": { "str": "Restricted Geneline" },
 		"description": "You genetic code seems to greatly resist deviating changes from other mutation types.",
 		"allowed_category": [ "KITSUNE" ],
 		"category": [ "KITSUNE" ],
